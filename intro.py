@@ -113,6 +113,7 @@ Explanation:
 - The condition on the while statement is evaluated at the start of each repetition.
 - If the condition is True, the body of the statement will execute. 
 '''
+
 # For Loop Example
 for item in [1,3,6,2,5]:
   print(item)
@@ -142,3 +143,23 @@ Explanation:
 - Iterates over a list of strings and for each string processes each character by appending it to a list.
 - The result is a list of all the letters in all of the words.
 '''
+
+# If Else Statement Example:
+n = 40
+if n < 0:
+  print("Sorry, value is negative")
+else:
+  print(n, "is positive")
+
+# Elif Statement Example: Nested Selection
+score = int(input('What did you get on the test? '))
+if score >= 90:
+  print('A')
+elif score >=80:
+  print('B')
+elif score >= 70:
+  print('C')
+elif score >= 60:
+  print('D')
+else:
+  print('F')
