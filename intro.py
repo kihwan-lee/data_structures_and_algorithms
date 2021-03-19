@@ -163,3 +163,20 @@ elif score >= 60:
   print('D')
 else:
   print('F')
+
+# Not going to get into List Comprehension just yet...
+
+
+#1.11 ----------------- EXCEPTION HANDLING
+
+'''
+There are two types of errors that typically occur when writing programs. 
+  - The first, known as a syntax error, simply means that the programmer has made a mistake in the structure of a statement or expression.
+  - The other type of error, known as a logic error, denotes a situation where the program executes but gives the wrong result.
+'''
+
+#1.12 ----------------- EXCEPTION HANDLING
+
+'''
+A function definition requires a name, a group of parameters, and a body. It may also explicitly return a value.
+'''
