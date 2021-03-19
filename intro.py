@@ -21,6 +21,7 @@ Abstraction:
   - We do not necessarily know how an operation is being performed but we know what the function is called and how to use it.
   - We describe the interface: the name of the funciton, what is needed(the parameters), and what will be returned. The details of the actual operation is hidden inside. 
 '''
+
 #1.3.1 ----------------- WHAT IS PROGRAMMING?
 
 '''
@@ -46,4 +47,61 @@ How an abstract data type operates:
 - The implementation is hidden one level deeper
 - The user is not concerned with the details of the implementation
 
+Data Structure: 
+- The implementation of an abstract data type
+- Requires a physical view of the data using some collection of programming constructs and primitive data types
 '''
+
+#1.3.3 ----------------- WHY STUDY ALGORITHMS?
+
+'''
+- We learn analysis techniques that allow us to compare and contrast solutions based solely on their own characteristics
+- By considering a number of different algorithms, we can begin to develop pattern recognition so that the next time a similar problem arises, we are better able to solve it
+- In the end, there are often many ways to solve a problem. Finding a solution and then deciding whether it is a good one are tasks that we will do over and over again
+
+'''
+
+#1.4 ----------------- REVIEW OF BASIC PYTHON
+
+'''Input and Output'''
+# Example
+user_radius = input("Please enter the radius of the circle ")
+radius = float(user_radius)
+diameter = 2 * radius
+print(diameter)
+
+'''Control Structures'''
+'''
+Algorithms require two important control structures: iteration and selection.
+- Iteration: Python provides a standard WHILE statement and a very powerful FOR statement.
+- The While Statement: Repeats a body of code as long as a condition is true.
+- The For Statement: Used to iterate over the members of a colleciton, so long as the collection is a sequence
+'''
+# While Example
+counter = 1 
+while counter <= 5:
+  print("Hello, world")
+  counter = counter + 1 
+'''
+Explanation: 
+- The condition on the while statement is evaluated at the start of each repetition.
+- If the condition is True, the body of the statement will execute. 
+'''
+# For Example
+for item in [1,3,6,2,5]:
+  print(item)
+'''
+Explanation: 
+- The variable iteam is assigned to be each successive value in the list [1,3,6,2,5]. 
+- The body of the iteration is then executed
+'''
+# For Example: Over a range of values
+for item in range(5):
+  print(item ** 2)
+'''
+Explanation:
+- The statement will perfrom the print function five times. 
+- The range funciton will return a range object representing the sequence 0,1,2,3,4 and each value will be assigned to the variable item.
+- This value is then squared and printed
+'''
+
