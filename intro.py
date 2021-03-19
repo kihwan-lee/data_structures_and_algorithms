@@ -22,7 +22,7 @@ Abstraction:
   - We describe the interface: the name of the funciton, what is needed(the parameters), and what will be returned. The details of the actual operation is hidden inside. 
 '''
 
-#1.3.1 ----------------- WHAT IS PROGRAMMING?
+#1.4 ----------------- WHAT IS PROGRAMMING?
 
 '''
 Programming:
@@ -33,7 +33,7 @@ Data Types:
 - Provide an interpretation for binary data so that we can think about the data in terms that make sense
 - Primitive data types provide the building blocks for algorithm development
 '''
-#1.3.2 ----------------- WHY STUDY DATA STRUCTURES & ABSTRACT DATA TYPES?
+#1.5 ----------------- WHY STUDY DATA STRUCTURES & ABSTRACT DATA TYPES?
 
 '''
 To manage the complexity of problems and the problem-solving process, computer scientists use abstractions to allow them to focus on the “big picture” without getting lost in the details.
@@ -52,16 +52,38 @@ Data Structure:
 - Requires a physical view of the data using some collection of programming constructs and primitive data types
 '''
 
-#1.3.3 ----------------- WHY STUDY ALGORITHMS?
+#1.6 ----------------- WHY STUDY ALGORITHMS?
 
 '''
 - We learn analysis techniques that allow us to compare and contrast solutions based solely on their own characteristics
 - By considering a number of different algorithms, we can begin to develop pattern recognition so that the next time a similar problem arises, we are better able to solve it
 - In the end, there are often many ways to solve a problem. Finding a solution and then deciding whether it is a good one are tasks that we will do over and over again
-
 '''
 
-#1.4 ----------------- REVIEW OF BASIC PYTHON
+#1.7 ----------------- REVIEW OF BASIC PYTHON
+
+'''
+Relational and Logical Operators
+
+  less than < 
+  greater than >
+  less than or equal <=
+  greater than or equal >=
+  equal ==
+  not equal !=
+  and: Both operands True for result to be True
+  or: One of the other operand is True for the result to be True
+  not: Negates the truth value, False beomces True, True becomes False
+
+Operations on Any Sequence
+
+  indexing [] Access an element of a sequence
+  concatenation + Combine sequences together
+  repetition * Concatenate a repeated number of times
+  membership in Ask whether an item is in a sequence
+  length len Ask the number of items in the sequence
+  slicing [:] Extract a part of a sequence
+'''
 
 '''Input and Output'''
 # Example
@@ -74,10 +96,12 @@ print(diameter)
 '''
 Algorithms require two important control structures: iteration and selection.
 - Iteration: Python provides a standard WHILE statement and a very powerful FOR statement.
-- The While Statement: Repeats a body of code as long as a condition is true.
-- The For Statement: Used to iterate over the members of a colleciton, so long as the collection is a sequence
+  - The While Statement: Repeats a body of code as long as a condition is true.
+  - The For Statement: Used to iterate over the members of a colleciton, so long as the collection is a sequence
+- Selection: Allow programmers to ask questions and then, based on the result, perform differenct actions.
+  - 
 '''
-# While Example
+# While Loop Example
 counter = 1 
 while counter <= 5:
   print("Hello, world")
@@ -87,7 +111,7 @@ Explanation:
 - The condition on the while statement is evaluated at the start of each repetition.
 - If the condition is True, the body of the statement will execute. 
 '''
-# For Example
+# For Loop Example
 for item in [1,3,6,2,5]:
   print(item)
 '''
@@ -95,7 +119,7 @@ Explanation:
 - The variable iteam is assigned to be each successive value in the list [1,3,6,2,5]. 
 - The body of the iteration is then executed
 '''
-# For Example: Over a range of values
+# For Loop Example: Over a range of values
 for item in range(5):
   print(item ** 2)
 '''
@@ -104,4 +128,15 @@ Explanation:
 - The range funciton will return a range object representing the sequence 0,1,2,3,4 and each value will be assigned to the variable item.
 - This value is then squared and printed
 '''
-
+# For Loop Example: Process each character of a string
+word_list = ['cat', 'dog', 'fish']
+letter_list = []
+for a_word in word_list:
+  for a_letter in a_word:
+    letter_list.append(a_letter)
+print(letter_list)
+'''
+Explanation:
+- Iterates over a list of strings and for each string processes each character by appending it to a list.
+- The result is a list of all the letters in all of the words.
+'''
