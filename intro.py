@@ -99,7 +99,9 @@ Algorithms require two important control structures: iteration and selection.
   - The While Statement: Repeats a body of code as long as a condition is true.
   - The For Statement: Used to iterate over the members of a colleciton, so long as the collection is a sequence
 - Selection: Allow programmers to ask questions and then, based on the result, perform differenct actions.
-  - 
+  - if
+  - else
+  - elif
 '''
 # While Loop Example
 counter = 1 
