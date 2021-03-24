@@ -186,6 +186,53 @@ def square(n):
 
 square(3)
 
-#1.13 ----------------- OBJECT ORIENTED PROGRAMMING
+#1.13 ----------------- OBJECT-ORIENTED PROGRAMMING IN PYTHON: DEFINING CLASSES
 
+'''
+We use abstract data types to provide the logical description of what a data object.... 
+  - looks like (its state) 
+  - what it can do (its methods) 
+'''
+
+# Fraction Class Example:
+class Fraction:
+  
+  #constructor 
+  def __init__(self, top, bottom):
+    self.num = top
+    self.den = bottom
+
+  def __str__(self):
+    return str(self.num) + "/" + str(self.den)
+
+my_fraction = Fraction(3, 5)
+print(my_fraction)
+'''
+The print function requires that the object convert itself into a string so that the string can be written to the output.
+Use the __str__ method to convet an object into a string.
+'''
+
+#1.14 ----------------- SUMMARY
+
+'''
+Computer science is the study of problem solving.
+
+Computer science uses abstraction as a tool for representing both processes and data.
+
+Abstract data types allow programmers to manage the complexity of a problem domain by hiding the details of the data.
+
+Python is a powerful, yet easy-to-use, object-oriented language.
+
+Lists, tuples, and strings are built in Python sequential collections.
+
+Dictionaries and sets are nonsequential collections of data.
+
+Classes allow programmers to implement abstract data types.
+
+Programmers can override standard methods as well as create new methods.
+
+Classes can be organized into hierarchies.
+
+A class constructor should always invoke the constructor of its parent before continuing on with its own data and behavior.
+'''
 
