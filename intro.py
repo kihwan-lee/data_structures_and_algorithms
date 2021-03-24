@@ -175,9 +175,17 @@ There are two types of errors that typically occur when writing programs.
   - The other type of error, known as a logic error, denotes a situation where the program executes but gives the wrong result.
 '''
 
-#1.12 ----------------- EXCEPTION HANDLING
+#1.12 ----------------- DEFINING FUNCTIONS
 
 '''
 A function definition requires a name, a group of parameters, and a body. It may also explicitly return a value.
 '''
+
+def square(n):
+  print(n**2)
+
+square(3)
+
+#1.13 ----------------- OBJECT ORIENTED PROGRAMMING
+
 
