@@ -1,0 +1,1 @@
+#2.1 ----------------- WRITING A PROPER PYTHON CLASS 
