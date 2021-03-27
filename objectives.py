@@ -35,4 +35,8 @@ What does computing resources even mean??
   Another way is the “execution time” or “running time” of the algorithm.
 '''
 
-#3.3 ----------------- WHAT IS ALGORITHM ANALYSIS?
+#3.3 ----------------- BIG-O NOTATION
+
+'''
+When trying to characterize an algorithm’s efficiency in terms of execution time, independent of any particular program or computer, it is important to quantify the number of operations or steps that the algorithm will require. If each of these steps is considered to be a basic unit of computation, then the execution time for an algorithm can be expressed as the number of steps required to solve the problem. Deciding on an appropriate basic unit of computation can be a complicated problem and will depend on how the algorithm is implemented.
+'''
