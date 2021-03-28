@@ -50,7 +50,36 @@ The worst case performance refers to a particular data set where the algorithm p
 Whereas a different data set for the exact same algorithm might have extraordinarily good performance. 
 
 However, in most cases the algorithm performs somewhere in between these two extremes (average case).
+'''
 
+#Big O Example
 
+a=5
+b=6
+c=10
+for i in range(n):
+  for j in range(n):
+      x = i * i
+      y = j * j
+      z = i * j
+for k in range(n):
+  w = a*k + 45
+  v = b*b
+d = 33
 
+'''
+Explanation:
+
+The number of assignment operations is the sum of four terms. The first term is the constant 3, representing the three assignment statements at the start of the fragment. 
+
+The second term is 3𝑛2, since there are three statements that are performed 𝑛2 times due to the nested iteration. 
+
+The third term is 2𝑛, two statements iterated n times. 
+
+Finally, the fourth term is the constant 1, representing the final assignment statement. 
+
+This gives us 𝑇(𝑛)=3+3𝑛^2+2𝑛+1=3𝑛^2+2𝑛+4. 
+
+By looking at the exponents, we can easily see that the 𝑛2 term will be dominant and therefore this fragment of code is 𝑂(𝑛2). 
+Note that all of the other terms as well as the coefficient on the dominant term can be ignored as n grows larger.
 '''
