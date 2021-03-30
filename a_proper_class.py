@@ -1,6 +1,6 @@
 import random
 
-#2.1 ----------------- WRITING A PROPER PYTHON CLASS 
+# 2.1 ----------------- WRITING A PROPER PYTHON CLASS 
 
 '''
 - Each class should have a docstring to provide some level of documentation on how to use the class.

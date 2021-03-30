@@ -1,4 +1,4 @@
-#3.1 ----------------- OBJECTIVES
+# 3.1 ----------------- OBJECTIVES
 
 '''
 To understand why algorithm analysis is important.
@@ -12,7 +12,7 @@ To understand how the implementation of Python data impacts algorithm analysis.
 To understand how to benchmark simple Python programs.
 '''
 
-#3.2 ----------------- WHAT IS ALGORITHM ANALYSIS?
+# 3.2 ----------------- WHAT IS ALGORITHM ANALYSIS?
 
 def sumOfN(n):
   theSum = 0
@@ -35,7 +35,7 @@ What does computing resources even mean??
   Another way is the “execution time” or “running time” of the algorithm.
 '''
 
-#3.3 ----------------- BIG-O NOTATION
+# 3.3 ----------------- BIG-O NOTATION
 
 '''
 When trying to characterize an algorithm’s efficiency in terms of execution time, independent of any particular program or computer, it is important to quantify the number of operations or steps that the algorithm will require. If each of these steps is considered to be a basic unit of computation, then the execution time for an algorithm can be expressed as the number of steps required to solve the problem. Deciding on an appropriate basic unit of computation can be a complicated problem and will depend on how the algorithm is implemented.
@@ -52,7 +52,7 @@ Whereas a different data set for the exact same algorithm might have extraordina
 However, in most cases the algorithm performs somewhere in between these two extremes (average case).
 '''
 
-#Big O Example
+# Big O Example
 
 a=5
 b=6
@@ -83,3 +83,9 @@ This gives us 𝑇(𝑛)=3+3𝑛^2+2𝑛+1=3𝑛^2+2𝑛+4.
 By looking at the exponents, we can easily see that the 𝑛2 term will be dominant and therefore this fragment of code is 𝑂(𝑛2). 
 Note that all of the other terms as well as the coefficient on the dominant term can be ignored as n grows larger.
 '''
+
+# 3.4 ----------------- AN ANAGRAM DETECTION EXAMPLE
+
+# Our goal is to write a boolean function that will take two strings and return whether they are anagrams.
+
+#

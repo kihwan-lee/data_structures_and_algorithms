@@ -1,6 +1,6 @@
-#1.2 ----------------- GETTING STARTED 
+# 1.2 ----------------- GETTING STARTED 
 
-#1.3 ----------------- WHAT IS COMPUTER SCIENCE?
+# 1.3 ----------------- WHAT IS COMPUTER SCIENCE?
 
 '''
 Computer science is the study of problems, problem-solving, and the solutions that come out of the problem-solving process. 
@@ -22,7 +22,7 @@ Abstraction:
   - We describe the interface: the name of the funciton, what is needed(the parameters), and what will be returned. The details of the actual operation is hidden inside. 
 '''
 
-#1.4 ----------------- WHAT IS PROGRAMMING?
+# 1.4 ----------------- WHAT IS PROGRAMMING?
 
 '''
 Programming:
@@ -33,7 +33,7 @@ Data Types:
 - Provide an interpretation for binary data so that we can think about the data in terms that make sense
 - Primitive data types provide the building blocks for algorithm development
 '''
-#1.5 ----------------- WHY STUDY DATA STRUCTURES & ABSTRACT DATA TYPES?
+# 1.5 ----------------- WHY STUDY DATA STRUCTURES & ABSTRACT DATA TYPES?
 
 '''
 To manage the complexity of problems and the problem-solving process, computer scientists use abstractions to allow them to focus on the “big picture” without getting lost in the details.
@@ -52,7 +52,7 @@ Data Structure:
 - Requires a physical view of the data using some collection of programming constructs and primitive data types
 '''
 
-#1.6 ----------------- WHY STUDY ALGORITHMS?
+# 1.6 ----------------- WHY STUDY ALGORITHMS?
 
 '''
 - We learn analysis techniques that allow us to compare and contrast solutions based solely on their own characteristics
@@ -60,7 +60,7 @@ Data Structure:
 - In the end, there are often many ways to solve a problem. Finding a solution and then deciding whether it is a good one are tasks that we will do over and over again
 '''
 
-#1.7 ----------------- REVIEW OF BASIC PYTHON
+# 1.7 ----------------- REVIEW OF BASIC PYTHON
 
 '''
 Relational and Logical Operators
@@ -167,7 +167,7 @@ else:
 # Not going to get into List Comprehension just yet...
 
 
-#1.11 ----------------- EXCEPTION HANDLING
+# 1.11 ----------------- EXCEPTION HANDLING
 
 '''
 There are two types of errors that typically occur when writing programs. 
@@ -175,7 +175,7 @@ There are two types of errors that typically occur when writing programs.
   - The other type of error, known as a logic error, denotes a situation where the program executes but gives the wrong result.
 '''
 
-#1.12 ----------------- DEFINING FUNCTIONS
+# 1.12 ----------------- DEFINING FUNCTIONS
 
 '''
 A function definition requires a name, a group of parameters, and a body. It may also explicitly return a value.
@@ -186,7 +186,7 @@ def square(n):
 
 square(3)
 
-#1.13 ----------------- OBJECT-ORIENTED PROGRAMMING IN PYTHON: DEFINING CLASSES
+# 1.13 ----------------- OBJECT-ORIENTED PROGRAMMING IN PYTHON: DEFINING CLASSES
 
 '''
 We use abstract data types to provide the logical description of what a data object.... 
@@ -212,7 +212,7 @@ The print function requires that the object convert itself into a string so that
 Use the __str__ method to convet an object into a string.
 '''
 
-#1.14 ----------------- SUMMARY
+# 1.14 ----------------- SUMMARY
 
 '''
 Computer science is the study of problem solving.
