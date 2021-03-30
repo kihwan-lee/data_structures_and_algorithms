@@ -90,34 +90,34 @@ Note that all of the other terms as well as the coefficient on the dominant term
 
   # 3.4.1 Solution 1: Checking Off
 
-def anagram_solution(s1, s2):
-  still_ok = True
-  if len(s1) != len(s2):
-    still_ok = False
+# def anagram_solution(s1, s2):
+#   still_ok = True
+#   if len(s1) != len(s2):
+#     still_ok = False
 
   
-  a_list = list(s2)
-  pos1 = 0
+#   a_list = list(s2)
+#   pos1 = 0
 
-  while pos1 < len(s1) and still_ok:
-    pos2 = 0
-    found = False
-    while pos2 < len(a_list) and not found:
-      if s1[pos1] == a_list[pos2]:
-        found = True
-      else:
-        pos2 = pos2 + 1
+#   while pos1 < len(s1) and still_ok:
+#     pos2 = 0
+#     found = False
+#     while pos2 < len(a_list) and not found:
+#       if s1[pos1] == a_list[pos2]:
+#         found = True
+#       else:
+#         pos2 = pos2 + 1
 
-    if found:
-      a_list[pos2] = None
-    else:
-      still_ok = False
+#     if found:
+#       a_list[pos2] = None
+#     else:
+#       still_ok = False
 
-    pos1 = pos1 + 1
+#     pos1 = pos1 + 1
 
-  return still_ok
+#   return still_ok
 
-print(anagram_solution('nar', 'ran'))
+# print(anagram_solution('nar', 'ran'))
 
 '''
 Explanation: 
@@ -133,4 +133,42 @@ However, since strings in Python are immutable, the first step in the process wi
 Each character from the first string can be checked against the characters in the list and if found, checked off by replacement.
 '''
 
-  # 3.4.2 Solution 1: Checking Off
+  # 3.4.2 Solution 2: Sort and Change
+
+def anagram_solution_2(s1, s2):
+  a_list_1 = list(s1)
+  a_list_2 = list(s2)
+
+  a_list_1.sort()
+  a_list_2.sort()
+
+  pos = 0
+  matches = True
+
+  while pos < len(s1) and matches: 
+    if a_list_1[pos] == a_list_2[pos]:
+      pos = pos + 1
+    
+    else:
+      matches = False
+  
+  return matches
+
+  # if len(a_list_1) == len(a_list_2):
+  #     return True
+  
+  # else:
+  #   return False
+
+print(anagram_solution_2('abcde', 'edcba'))
+
+'''
+Explanation: 
+Another solution to the anagram problem will make use of the fact that even though s1 and s2 are different, they are anagrams only if they consist of exactly the same characters. 
+
+So, if we begin by sorting each string alphabetically, from a to z, we will end up with the same string if the original two strings are anagrams
+
+We use the built-in sort method on lists by simply converting each string to a list at the start.
+
+Sorting is typically either 𝑂(𝑛2) or 𝑂(𝑛log𝑛), so the sorting operations dominate the iteration. In the end, this algorithm will have the same order of magnitude as that of the sorting process.
+'''
