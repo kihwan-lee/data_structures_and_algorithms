@@ -14,14 +14,14 @@ To understand how to benchmark simple Python programs.
 
 # 3.2 ----------------- WHAT IS ALGORITHM ANALYSIS?
 
-def sumOfN(n):
-  theSum = 0
-  for i in range(1, n+1):
-    theSum = theSum + i
-    print(theSum)
-  return theSum
+# def sumOfN(n):
+#   theSum = 0
+#   for i in range(1, n+1):
+#     theSum = theSum + i
+#     print(theSum)
+#   return theSum
 
-print(sumOfN(10))
+# print(sumOfN(10))
 
 '''
 Algorithm analysis is concerned with comparing algorithms based upon the amount of computing resources that each algorithm uses. 
@@ -54,18 +54,18 @@ However, in most cases the algorithm performs somewhere in between these two ext
 
 # Big O Example
 
-a=5
-b=6
-c=10
-for i in range(n):
-  for j in range(n):
-      x = i * i
-      y = j * j
-      z = i * j
-for k in range(n):
-  w = a*k + 45
-  v = b*b
-d = 33
+# a=5
+# b=6
+# c=10
+# for i in range(n):
+#   for j in range(n):
+#       x = i * i
+#       y = j * j
+#       z = i * j
+# for k in range(n):
+#   w = a*k + 45
+#   v = b*b
+# d = 33
 
 '''
 Explanation:
@@ -88,4 +88,49 @@ Note that all of the other terms as well as the coefficient on the dominant term
 
 # Our goal is to write a boolean function that will take two strings and return whether they are anagrams.
 
-#
+  # 3.4.1 Solution 1: Checking Off
+
+def anagram_solution(s1, s2):
+  still_ok = True
+  if len(s1) != len(s2):
+    still_ok = False
+
+  
+  a_list = list(s2)
+  pos1 = 0
+
+  while pos1 < len(s1) and still_ok:
+    pos2 = 0
+    found = False
+    while pos2 < len(a_list) and not found:
+      if s1[pos1] == a_list[pos2]:
+        found = True
+      else:
+        pos2 = pos2 + 1
+
+    if found:
+      a_list[pos2] = None
+    else:
+      still_ok = False
+
+    pos1 = pos1 + 1
+
+  return still_ok
+
+print(anagram_solution('nar', 'ran'))
+
+'''
+Explanation: 
+
+Our first solution to the anagram problem will check the lengths of the strings and then to see that each character in the first string actually occurs in the second. 
+
+If it is possible to “checkoff” each character, then the two strings must be anagrams. 
+
+Checking off a character will be accomplished by replacing it with the special Python value None. 
+
+However, since strings in Python are immutable, the first step in the process will be to convert the second string to a list. 
+
+Each character from the first string can be checked against the characters in the list and if found, checked off by replacement.
+'''
+
+  # 3.4.2 Solution 1: Checking Off
