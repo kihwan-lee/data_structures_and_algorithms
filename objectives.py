@@ -206,3 +206,24 @@ def final_anagram_solution(s1, s2):
   return still_ok
 
 print(final_anagram_solution('apple', 'elapp'))
+
+
+'''
+Explanation:
+This solution has a number of iterations. However, unlike the first solution, none of them are nested. 
+
+The first two iterations (the for loops) used to count the characters are both based on n. 
+
+The third iteration (the while loop), comparing the two lists of counts, always takes 26 steps since there are 26 possible characters in the strings. Adding it all up gives us 𝑇(𝑛)=2𝑛+26 steps. 
+
+That is 𝑂(𝑛). We have found a linear order of magnitude algorithm for solving this problem.
+
+---------------------------
+
+Before leaving this example, we need to say something about space requirements. Although the last solution was able to run in linear time, it could only do so by using additional storage to keep the two lists of character counts. In other words, this algorithm sacrificed space in order to gain time.
+
+This is a common occurrence. On many occasions you will need to make decisions between time and space trade-offs. In this case, the amount of extra space is not significant. However, if the underlying alphabet had millions of characters, there would be more concern. As a computer scientist, when given a choice of algorithms, it will be up to you to determine the best use of computing resources given a particular problem.
+'''
+
+# 3.5 Performance of Python Data Structures
+
