@@ -88,7 +88,7 @@ Note that all of the other terms as well as the coefficient on the dominant term
 
 # Our goal is to write a boolean function that will take two strings and return whether they are anagrams.
 
-  # 3.4.1 Solution 1: Checking Off
+# 3.4.1 Solution 1: Checking Off
 
 # def anagram_solution(s1, s2):
 #   still_ok = True
@@ -133,7 +133,7 @@ However, since strings in Python are immutable, the first step in the process wi
 Each character from the first string can be checked against the characters in the list and if found, checked off by replacement.
 '''
 
-  # 3.4.2 Solution 2: Sort and Change
+# 3.4.2 Solution 2: Sort and Change
 
 def anagram_solution_2(s1, s2):
   a_list_1 = list(s1)
@@ -172,3 +172,19 @@ We use the built-in sort method on lists by simply converting each string to a l
 
 Sorting is typically either 𝑂(𝑛2) or 𝑂(𝑛log𝑛), so the sorting operations dominate the iteration. In the end, this algorithm will have the same order of magnitude as that of the sorting process.
 '''
+
+# 3.4.3 Solution 3: Brute Force
+
+'''
+A brute force technique for solving a probelm typically tries to exhaust all possibilities.
+'''
+
+# 3.4.4 Solution 4: Count and Compare
+
+def final_anagram_solution(s1, s2):
+  c1 = [0] * 26
+  c2 = [0] * 26
+
+  for i in range(len(s1)):
+    pos = ord(s1[i] - ord('a'))
+    c1[pos] = c1[pos] + 1
