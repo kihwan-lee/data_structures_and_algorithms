@@ -135,32 +135,32 @@ Each character from the first string can be checked against the characters in th
 
 # 3.4.2 Solution 2: Sort and Change
 
-def anagram_solution_2(s1, s2):
-  a_list_1 = list(s1)
-  a_list_2 = list(s2)
+# def anagram_solution_2(s1, s2):
+#   a_list_1 = list(s1)
+#   a_list_2 = list(s2)
 
-  a_list_1.sort()
-  a_list_2.sort()
+#   a_list_1.sort()
+#   a_list_2.sort()
 
-  pos = 0
-  matches = True
+#   pos = 0
+#   matches = True
 
-  while pos < len(s1) and matches: 
-    if a_list_1[pos] == a_list_2[pos]:
-      pos = pos + 1
+#   while pos < len(s1) and matches: 
+#     if a_list_1[pos] == a_list_2[pos]:
+#       pos = pos + 1
     
-    else:
-      matches = False
+#     else:
+#       matches = False
   
-  return matches
+#   return matches
 
-  # if len(a_list_1) == len(a_list_2):
-  #     return True
+#   if len(a_list_1) == len(a_list_2):
+#       return True
   
-  # else:
-  #   return False
+#   else:
+#     return False
 
-print(anagram_solution_2('abcde', 'edcba'))
+# print(anagram_solution_2('abcde', 'edcba'))
 
 '''
 Explanation: 
@@ -186,7 +186,23 @@ def final_anagram_solution(s1, s2):
   c2 = [0] * 26
 
   for i in range(len(s1)):
-    pos = ord(s1[i] - ord('a'))
+    pos = ord(s1[i]) - ord('a')
     c1[pos] = c1[pos] + 1
 
-#
+  for i in range(len(s2)):
+    pos = ord(s2[i]) - ord('a')
+    c2[pos] = c2[pos] + 1
+
+  j = 0
+  still_ok = True
+
+  while j < 26 and still_ok:
+    if c1[j] == c2[j]:
+      j = j + 1
+    
+    else:
+      still_ok = False
+  
+  return still_ok
+
+print(final_anagram_solution('apple', 'elapp'))
