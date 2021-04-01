@@ -1,3 +1,5 @@
+import timeit
+import random
 # 3.1 ----------------- OBJECTIVES
 
 '''
@@ -225,5 +227,120 @@ Before leaving this example, we need to say something about space requirements. 
 This is a common occurrence. On many occasions you will need to make decisions between time and space trade-offs. In this case, the amount of extra space is not significant. However, if the underlying alphabet had millions of characters, there would be more concern. As a computer scientist, when given a choice of algorithms, it will be up to you to determine the best use of computing resources given a particular problem.
 '''
 
-# 3.5 Performance of Python Data Structures
+# 3.5 ----------------- PERFORMANCE OF PYTHON DATA STRUCTURES
 
+#  -----------------------------------------
+
+# 3.6 ----------------- LISTS
+
+
+# Time Complexity Example: Concatenation, Append, List Comprehension, Range Function Inside List Constructor
+
+def test1():
+  l = []
+  for i in range(1000):
+      l = l + [i]
+
+def test2():
+  l = []
+  for i in range(1000):
+      l.append(i)
+
+def test3():
+  l = [i for i in range(1000)]
+
+def test4():
+  l = list(range(1000))
+
+
+t1 = timeit.Timer("test1()", "from __main__ import test1")
+print("concat ",t1.timeit(number=1000), "milliseconds")
+t2 = timeit.Timer("test2()", "from __main__ import test2")
+print("append ",t2.timeit(number=1000), "milliseconds")
+t3 = timeit.Timer("test3()", "from __main__ import test3")
+print("comprehension ",t3.timeit(number=1000), "milliseconds")
+t4 = timeit.Timer("test4()", "from __main__ import test4")
+print("list range ",t4.timeit(number=1000), "milliseconds")
+
+'''
+Name:             Time Complexity
+
+Constant Time:    0(1)
+
+Logarithmic Time: 0(log n)
+
+Linear Time:      0(n)
+
+Quasilinear Time: 0(n log n)
+
+Quadratic Time:   0(n^2)
+
+Exponential Time: 0(2^n)
+
+Factorial Time:   0(n!)
+'''
+
+'''
+Operation:         Big-O Efficiency
+
+index[]:           O(1)
+index assignment:  O(1)
+append:            O(1)
+pop():             O(1)
+pop(i):            O(n)
+insert(i, item):   O(n)
+del operator:      O(n)
+iteration:         O(n)
+contains (in):     O(n)
+get slice [x:y]:   O(k)
+del slice:         O(n)
+set slice:         O(n + k)
+reverse:           O(n)
+concatenate:       O(k)
+sort:              O(n log n)
+multiply:          O(nk)
+'''
+
+# 3.6 ----------------- DICTIONARIES
+
+'''
+Operation:        Big-O Efficiency
+
+copy:             O(n)
+get item:         O(1)
+set item:         O(1)
+delete item:      O(1)
+contains (in):    O(1)
+iteration:        O(n)
+'''
+
+# Comparing the performance of the contains operation between lists and dictionaries
+
+for i in range(10000,1000001,20000):
+  t = timeit.Timer("random.randrange(%d) in x"%i,
+                  "from __main__ import random,x")
+  # list
+  x = list(range(i))       
+  lst_time = t.timeit(number=1000)
+
+  # dictionary
+  x = {j:None for j in range(i)}
+  d_time = t.timeit(number=1000)
+  print("%d,%10.3f,%10.3f" % (i, lst_time, d_time))
+
+'''
+Explanation:
+List Time Complexity: O(n) 
+Dictionary Time Complexity: O(1)
+
+The bigger the list, the longer it takes to determine if any one number is contained in the list.
+That does not apply for Dictionary 
+'''
+
+# 3.7 ----------------- SUMMARY
+
+'''
+Algorithm analysis is an implementation-independent way of measuring an algorithm.
+
+Big-O notation allows algorithms to be classified by their dominant process with respect to the size of the problem.
+'''
