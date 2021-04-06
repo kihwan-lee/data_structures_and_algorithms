@@ -61,9 +61,10 @@ the stack the longest.
   - The most recently added item is the one that is in position to be removed first.
   - This principle provides an ordering based on length of time in the collection. 
   - Newer items are near the top, while older items are near the base. 
-  
 
-
+Strength of Stacks:
+- GREAT for reversing the order of items. 
+- Keeping track of state or when things have occured. 
 '''
 
 
