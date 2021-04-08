@@ -133,3 +133,9 @@ Explanation:
   - Pop the open parentheses out of the stack.
   - Go through the entire length of the string and if the stack is empty at the end, that means it's balanced.
 '''
+
+# 4.7 ----------------- HARDER BALANCED PARENTHESES PROBLEM (GENERAL CASE)
+
+'''
+Skipped cause it was just too much haha at least for now...
+'''
