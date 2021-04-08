@@ -95,7 +95,41 @@ Not Balanced Example:
 '''
 Challenge:
   - Write an algorithm that will read a string of parentheses from left to right and decide whether the symbols are balanced. 
-    - As you process symbols from left to right, the most recent opening parenthesis must match the next closing symbol. 
-    - Also, the first opening symbol processed may have to wait until the very last symbol for its match. 
-    - Closing symbols match opening symbols in the reverse order of their appearance; they match from the inside out. 
+'''
+
+def parentheses_checker(symbol_string):
+  s = Stack()
+  balanced = True
+  index = 0
+  while index < len(symbol_string) and balanced:
+    symbol = symbol_string[index]
+    if symbol == "(":
+      s.push(symbol)
+    else: 
+      if s.isEmpty():
+        balanced = False
+
+      else:
+        s.pop()
+
+    index += 1
+
+  if balanced and s.isEmpty():
+    return True
+  else: 
+    return False
+
+print(parentheses_checker('((()))'))
+print(parentheses_checker('()'))
+
+'''
+Explanation:
+- You know it's balanced if there are the same number of opening parentheses as there are closing parentheses.
+  - Start by making an empty Stack
+  - while loop is there to cover the length of the string
+  - If it's an open parentheses, add into the stack
+  - If it's a closing parentheses, check to see if the stack is empty. If empty then it's not balanced.
+  - If it isn't empty, that means there's still a open parentheses waiting to be matched.
+  - Pop the open parentheses out of the stack.
+  - Go through the entire length of the string and if the stack is empty at the end, that means it's balanced.
 '''
