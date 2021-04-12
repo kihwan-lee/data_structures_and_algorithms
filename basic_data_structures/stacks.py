@@ -139,3 +139,13 @@ Explanation:
 '''
 Skipped cause it was just too much haha at least for now...
 '''
+
+# 4.8 ----------------- CONVERTING DECIMAL NUMBERS TO BINARY NUMBERS
+
+'''
+Skipped cause it was just too much haha at least for now...
+'''
+
+'''
+Skipped cause I need to move on to Queues...
+'''
