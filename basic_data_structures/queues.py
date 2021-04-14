@@ -1,3 +1,5 @@
+from pythonds.basic import Queue
+
 # 4.10 ----------------- WHAT IS A QUEUE?
 
 '''
@@ -65,3 +67,28 @@ size() : Returns the number of items in the queue. It needs no parameters and re
 
 # 4.13 ----------------- SIMULATION: HOT POTATO
 
+'''
+Challenge:
+  - Write an algorithm that replicates the Hot Potato game. 
+'''
+
+def hot_potato(name_list, num):
+  # Create the list of names/participants
+  simqueue = Queue()
+  for name in name_list:
+    simqueue.enqueue(name)
+
+  # Run the game until there is only 1 person remaining
+  while simqueue.size() > 1:
+    for i in range(num):
+      simqueue.enqueue(simqueue.dequeue())
+      print(simqueue.size())
+
+    print('hello')
+
+    simqueue.dequeue()
+    print(simqueue.size())
+
+  return simqueue.dequeue()
+
+print(hot_potato(["Bill","David","Susan","Jane"], 2))
