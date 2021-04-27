@@ -57,3 +57,58 @@ Node:
   - Second, each node must hold a reference to the next node
 '''
 
+class Node:
+
+  def __init__(self, initdata):
+    self.data = initdata
+    self.next = None
+
+  def get_data(self):
+    return self.data
+
+  def get_next(self):
+    return self.next
+
+  def set_data(self, newdata):
+    self.data = newdata
+
+  def set_next(self, newnext):
+    self.next = newnext
+
+# 4.21.2 ----------------- THE UNORDERED LIST CLASS
+
+'''
+- We know that as long as we know where to find the first node which contains the first item, each item after that can be found successively following the next links.
+- With this in mind, the UnorderedList class must maintain a reference to the first node.
+'''
+
+class UnorderedList:
+
+  def __init__(self):
+    self.head = None
+
+  def is_empty(self):
+    return self.head == None
+
+  def add(self, item):
+    temp = Node(item)
+    temp.set_next(self.head)
+    self.head = temp
+
+
+mylist = UnorderedList()
+
+print(mylist.is_empty())
+mylist.add(31)
+mylist.add(77)
+mylist.add(17)
+mylist.add(93)
+mylist.add(26)
+mylist.add(54)
+
+'''
+- Note that since 31 is the first item added to the list, it will eventually be the last node on the linked list as every other item is added ahead of it. 
+- Also, since 54 is the last item added, it will become the data value in the first node of the linked list.
+'''
+
+print(mylist)
