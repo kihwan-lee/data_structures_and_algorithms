@@ -8,25 +8,28 @@ Deque:
 - Main difference is the unrestrictive nature of adding and removing items.
   - New items can be added at either the front of the rear. 
   - Likewise, existing items can be removed from either end.
-- In a sense, this hybrid linear structure provides all the capabilites of stacks and queues in a single data structure.
+
+
+Strength of Deques:
+- In a sense, it provides all the capabilites of stacks and queues in a single data structure.
 '''
 
 # 4.16 ----------------- THE DEQUE ABSTRACT DATA TYPE
 
 '''
-Deque() : creates a new deque that is empty. It needs no parameters and returns an empty deque.
+Deque() : Creates a new deque that is empty. It needs no parameters and returns an empty deque.
 
-addFront(item) : adds a new item to the front of the deque. It needs the item and returns nothing.
+addFront(item) : Adds a new item to the front of the deque. It needs the item and returns nothing.
 
-addRear(item) : adds a new item to the rear of the deque. It needs the item and returns nothing.
+addRear(item) : Adds a new item to the rear of the deque. It needs the item and returns nothing.
 
-removeFront() : removes the front item from the deque. It needs no parameters and returns the item. The deque is modified.
+removeFront() : Removes the front item from the deque. It needs no parameters and returns the item. The deque is modified.
 
-removeRear() : removes the rear item from the deque. It needs no parameters and returns the item. The deque is modified.
+removeRear() : Removes the rear item from the deque. It needs no parameters and returns the item. The deque is modified.
 
-isEmpty() : tests to see whether the deque is empty. It needs no parameters and returns a boolean value.
+isEmpty() : Tests to see whether the deque is empty. It needs no parameters and returns a boolean value.
 
-size() : returns the number of items in the deque. It needs no parameters and returns an integer.
+size() : Returns the number of items in the deque. It needs no parameters and returns an integer.
 '''
 
 # 4.17 ----------------- IMPLEMENTING A DEQUE IN PYTHON
